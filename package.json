@@ -9,7 +9,7 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "deploy": "wrangler pages deploy dist/ --project-name expensy",
+    "deploy": "wrangler pages deploy dist/client --project-name expensy",
     "astro": "astro"
   },
   "dependencies": {

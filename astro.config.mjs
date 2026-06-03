@@ -2,16 +2,17 @@
 import { defineConfig } from "astro/config";
 import tailwindcss from "@tailwindcss/vite";
 import sitemap from "@astrojs/sitemap";
+import cloudflare from "@astrojs/cloudflare";
 
 const SITE = "https://expensy.com";
 
 // https://astro.build/config
 export default defineConfig({
   site: SITE,
+  output: "static",
   integrations: [
     sitemap({
       filter(url) {
-        // Exclude error pages and contact from sitemap
         const full = new URL(url);
         const exclude = ["/404/", "/500/", "/contact/"];
         return !exclude.includes(full.pathname);
@@ -35,10 +36,8 @@ export default defineConfig({
       lastmod: new Date("2026-06-03"),
     }),
   ],
-
+  adapter: cloudflare(),
   vite: {
     plugins: [tailwindcss()],
   },
-
-  adapter: cloudflare(),
 });
