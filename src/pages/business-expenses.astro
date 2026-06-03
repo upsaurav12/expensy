@@ -1,0 +1,262 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+const keyword = "Business Expenses";
+const slug = "business-expenses";
+const canonical = `https://expensy.com/${slug}/`;
+
+const faqs = [
+  {
+    question: "What are business expenses?",
+    answer: "Business expenses are ordinary and necessary costs incurred to operate a business. They include rent, salaries, marketing, utilities, office supplies, travel, insurance, and software subscriptions. Most business expenses are tax-deductible, reducing the business's taxable income."
+  },
+  {
+    question: "What are examples of business expenses?",
+    answer: "Common business expenses include: rent for office space, employee salaries and wages, marketing and advertising costs like Google Ads and social media, utilities such as electricity and internet, office supplies, business insurance, legal and accounting fees, travel expenses like flights and hotels, and software subscriptions."
+  },
+  {
+    question: "What business expenses are tax deductible?",
+    answer: "Most ordinary and necessary business expenses are tax deductible. This includes rent, salaries, marketing, insurance, professional fees, office supplies, travel, client meals (50%), software subscriptions, home office expenses, vehicle expenses, and business-related education. Capital expenses are depreciated rather than fully deducted."
+  },
+  {
+    question: "What is the difference between personal and business expenses?",
+    answer: "Personal expenses are costs for personal use like home rent or personal groceries. Business expenses are costs incurred specifically to generate business income. Mixing them is a common accounting error. If an expense serves both purposes like a phone bill, only the business-use portion is deductible with proper documentation."
+  },
+  {
+    question: "How to track business expenses?",
+    answer: "Track business expenses by opening a separate business bank account and credit card, using accounting software like QuickBooks or Xero, categorizing every transaction, keeping digital copies of receipts, and reconciling monthly. For freelancers, even a simple spreadsheet works but dedicated tools save time and reduce errors."
+  },
+  {
+    question: "Is a laptop a business expense?",
+    answer: "Yes, a laptop purchased for business use is a business expense. If it costs more than a certain threshold it may be classified as a capital expense and depreciated over time. Lower-cost laptops can typically be fully deducted in the year of purchase. Check your local tax rules for specific thresholds."
+  },
+  {
+    question: "What are deductible business expenses for freelancers?",
+    answer: "Freelancers can deduct: home office if exclusively used for business, internet and phone bills for business-use portion, software subscriptions, website hosting, marketing costs, professional development courses, coworking space fees, travel for client meetings, health insurance premiums, and retirement contributions."
+  },
+  {
+    question: "Are startup costs business expenses?",
+    answer: "Startup costs are treated differently from ongoing operating expenses. Tax authorities typically allow you to deduct a portion of startup costs in your first year with the remainder amortized over several years. Startup costs include market research, advertising before launch, training, and legal fees for business formation."
+  },
+  {
+    question: "How do business expenses affect taxes?",
+    answer: "Business expenses directly reduce taxable income. If your business earns Rs 10,00,000 and has Rs 3,00,000 in deductible expenses, you only pay tax on Rs 7,00,000. This is why accurate expense tracking is essential. Every missed deduction means paying more tax than necessary."
+  },
+  {
+    question: "What is an unallowable business expense?",
+    answer: "Unallowable business expenses are costs that cannot be deducted from business income. Examples include personal living expenses, fines and penalties, political contributions, capital expenses (must be depreciated), and expenses that are not ordinary and necessary for your specific business type."
+  },
+  {
+    question: "Can I deduct business meals?",
+    answer: "Yes, business meals are generally 50% deductible in most jurisdictions. The meal must be directly related to your business with a client or customer present. Keep receipts noting who you met and the business purpose. Lavish or extravagant meals may be subject to additional limitations."
+  },
+  {
+    question: "Are business expenses considered liabilities?",
+    answer: "Business expenses are not themselves liabilities. They are costs that reduce equity on the income statement. However, if a business expense has been incurred but not yet paid, it creates a liability such as accounts payable or accrued expense on the balance sheet."
+  },
+  {
+    question: "What is COGS vs business expenses?",
+    answer: "Cost of Goods Sold (COGS) covers direct costs of producing products like raw materials and direct labor. Business expenses (operating expenses) cover everything else like rent, marketing, and admin salaries. Both are deductible but reported separately on tax returns."
+  },
+  {
+    question: "How to categorize business expenses correctly?",
+    answer: "Categorize business expenses by type: operating like rent and utilities, cost of goods sold like materials and labor, selling like marketing and commissions, general and administrative like salaries and insurance, and capital like equipment and vehicles. Use accounting software for consistency."
+  },
+  {
+    question: "What is the home office deduction?",
+    answer: "The home office deduction allows you to deduct expenses for the part of your home used exclusively and regularly for business. There are two methods: simplified (per square foot rate) and regular (actual expenses prorated by square footage). Eligible expenses include mortgage interest, rent, utilities, and insurance."
+  },
+];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map(faq => ({
+    "@type": "Question",
+    name: faq.question,
+    acceptedAnswer: { "@type": "Answer", text: faq.answer }
+  }))
+};
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "Business Expenses — Definition, Examples & Tax Deduction Guide",
+  description: "Learn what business expenses are, see deductible examples for small businesses and freelancers, and master expense tracking with our complete guide.",
+  author: { "@type": "Organization", name: "expensy" },
+  publisher: { "@type": "Organization", name: "expensy" },
+  datePublished: "2026-06-03",
+  dateModified: "2026-06-03"
+};
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://expensy.com/" },
+    { "@type": "ListItem", position: 2, name: "Business Expenses", item: canonical }
+  ]
+};
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+<script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+<script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
+
+<Layout
+  title="Business Expenses — Definition, Examples & Tax Deduction Guide"
+  description="Learn what business expenses are, see tax-deductible examples for small businesses and freelancers, and master expense tracking. Free Expense Analyzer included."
+  canonical={canonical}
+>
+  <Header />
+  <main class="mx-auto max-w-3xl px-6 pt-32 pb-24">
+    <div class="mb-6 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5">
+      <span class="font-visueltpro text-xs tracking-wide text-mist-gray">Small Business Guide</span>
+    </div>
+
+    <h1 class="font-bradford text-4xl font-medium leading-tight tracking-tight text-cloud-whisper sm:text-5xl">
+      Business Expenses — Definition, Examples & Tax Guide
+    </h1>
+
+    <p class="mt-4 font-visueltpro text-lg leading-relaxed text-mist-gray">
+      Business expenses are the ordinary and necessary costs of running a business. Understanding which expenses are deductible and how to track them is essential for profitability and tax compliance.
+    </p>
+
+    <hr class="my-10 border-white/10" />
+
+    <h2 class="font-bradford text-2xl font-medium text-cloud-whisper">What Are Business Expenses?</h2>
+    <p class="mt-3 font-visueltpro leading-relaxed text-mist-gray">
+      A <strong class="text-cloud-whisper">business expense</strong> is any cost incurred in the ordinary course of operating a business. From the rent on your office to the software that runs your operations — if it is necessary for your business, it is a business expense.
+    </p>
+    <p class="mt-3 font-visueltpro leading-relaxed text-mist-gray">
+      The key distinction between a business expense and a personal expense is intent. A business expense must be directly related to generating business income. That is why tax authorities require businesses to separate personal spending from business spending — and why every entrepreneur should understand the <a href="/expenses-definition" class="text-cloud-whisper underline underline-offset-2 decoration-white/20 hover:decoration-white/60">expenses definition</a> clearly.
+    </p>
+
+    <h2 class="mt-10 font-bradford text-2xl font-medium text-cloud-whisper">Why Business Expenses Matter</h2>
+    <ul class="mt-3 space-y-2 font-visueltpro text-mist-gray">
+      <li class="flex items-start gap-3"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-blue-400"></span><span><strong class="text-cloud-whisper">Tax savings</strong> — Every legitimate business expense you track reduces your tax bill. Missing deductions is like leaving money on the table.</span></li>
+      <li class="flex items-start gap-3"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-blue-400"></span><span><strong class="text-cloud-whisper">Profitability clarity</strong> — You cannot know if your business is truly profitable unless you know all your costs. Tracking expenses reveals your real margins.</span></li>
+      <li class="flex items-start gap-3"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-blue-400"></span><span><strong class="text-cloud-whisper">Investor readiness</strong> — Clean financial records with properly categorized <a href="/operating-expenses" class="text-cloud-whisper underline underline-offset-2 decoration-white/20 hover:decoration-white/60">operating expenses</a> are essential for funding applications.</span></li>
+    </ul>
+
+    <h2 class="mt-10 font-bradford text-2xl font-medium text-cloud-whisper">Common Business Expenses Examples</h2>
+    <div class="mt-4 overflow-hidden rounded-xl border border-white/10">
+      <table class="w-full font-visueltpro text-sm">
+        <thead>
+          <tr class="border-b border-white/10 bg-white/[0.03]">
+            <th class="px-6 py-4 text-left font-medium text-cloud-whisper">Category</th>
+            <th class="px-6 py-4 text-left font-medium text-cloud-whisper">Examples</th>
+            <th class="px-6 py-4 text-left font-medium text-cloud-whisper">Tax Deductible?</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="border-b border-white/5"><td class="px-6 py-4 text-cloud-whisper">Rent</td><td class="px-6 py-4 text-mist-gray">Office, warehouse, retail space</td><td class="px-6 py-4 text-emerald-400">Yes</td></tr>
+          <tr class="border-b border-white/5"><td class="px-6 py-4 text-cloud-whisper">Salaries & Wages</td><td class="px-6 py-4 text-mist-gray">Employee pay, bonuses, commissions</td><td class="px-6 py-4 text-emerald-400">Yes</td></tr>
+          <tr class="border-b border-white/5"><td class="px-6 py-4 text-cloud-whisper">Marketing</td><td class="px-6 py-4 text-mist-gray">Ads, social media, SEO, content</td><td class="px-6 py-4 text-emerald-400">Yes</td></tr>
+          <tr class="border-b border-white/5"><td class="px-6 py-4 text-cloud-whisper">Software</td><td class="px-6 py-4 text-mist-gray">SaaS, accounting tools, CRM</td><td class="px-6 py-4 text-emerald-400">Yes</td></tr>
+          <tr class="border-b border-white/5"><td class="px-6 py-4 text-cloud-whisper">Office Supplies</td><td class="px-6 py-4 text-mist-gray">Stationery, printer toner, paper</td><td class="px-6 py-4 text-emerald-400">Yes</td></tr>
+          <tr class="border-b border-white/5"><td class="px-6 py-4 text-cloud-whisper">Travel</td><td class="px-6 py-4 text-mist-gray">Flights, hotels, car rental</td><td class="px-6 py-4 text-emerald-400">Yes</td></tr>
+          <tr class="border-b border-white/5"><td class="px-6 py-4 text-cloud-whisper">Client Meals</td><td class="px-6 py-4 text-mist-gray">Business lunches, dinners</td><td class="px-6 py-4 text-emerald-400">50%</td></tr>
+          <tr><td class="px-6 py-4 text-cloud-whisper">Personal Expenses</td><td class="px-6 py-4 text-mist-gray">Personal groceries, family entertainment</td><td class="px-6 py-4 text-red-400">No</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 class="mt-10 font-bradford text-2xl font-medium text-cloud-whisper">Common Mistakes With Business Expenses</h2>
+    <ul class="mt-4 space-y-4 font-visueltpro text-mist-gray">
+      <li class="flex items-start gap-3">
+        <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-red-400"></span>
+        <div><strong class="text-cloud-whisper">Mixing personal and business expenses</strong> — Using a personal account for business transactions creates accounting chaos and audit risk. Always maintain separate accounts.</div>
+      </li>
+      <li class="flex items-start gap-3">
+        <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-red-400"></span>
+        <div><strong class="text-cloud-whisper">Failing to keep receipts</strong> — Tax authorities require documentation. A digital receipt scanner or folder system prevents lost deductions during tax season.</div>
+      </li>
+      <li class="flex items-start gap-3">
+        <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-red-400"></span>
+        <div><strong class="text-cloud-whisper">Missing small deductions</strong> — Monthly software subscriptions and parking receipts add up. Tracking every expense, no matter how small, maximizes your deductions.</div>
+      </li>
+    </ul>
+
+    <h2 class="mt-10 font-bradford text-2xl font-medium text-cloud-whisper">Business Expenses vs Personal Expenses</h2>
+    <div class="mt-4 overflow-hidden rounded-xl border border-white/10">
+      <table class="w-full font-visueltpro text-sm">
+        <thead>
+          <tr class="border-b border-white/10 bg-white/[0.03]">
+            <th class="px-6 py-4 text-left font-medium text-cloud-whisper">Aspect</th>
+            <th class="px-6 py-4 text-left font-medium text-cloud-whisper">Business Expenses</th>
+            <th class="px-6 py-4 text-left font-medium text-cloud-whisper">Personal Expenses</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="border-b border-white/5"><td class="px-6 py-4 text-cloud-whisper">Purpose</td><td class="px-6 py-4 text-mist-gray">Generate business income</td><td class="px-6 py-4 text-mist-gray">Personal living</td></tr>
+          <tr class="border-b border-white/5"><td class="px-6 py-4 text-cloud-whisper">Tax Treatment</td><td class="px-6 py-4 text-mist-gray">Tax deductible</td><td class="px-6 py-4 text-mist-gray">Not deductible</td></tr>
+          <tr class="border-b border-white/5"><td class="px-6 py-4 text-cloud-whisper">Examples</td><td class="px-6 py-4 text-mist-gray">Office rent, software, ads</td><td class="px-6 py-4 text-mist-gray">Home rent, groceries, clothing</td></tr>
+          <tr class="border-b border-white/5"><td class="px-6 py-4 text-cloud-whisper">Account Required</td><td class="px-6 py-4 text-mist-gray">Business bank account</td><td class="px-6 py-4 text-mist-gray">Personal bank account</td></tr>
+          <tr><td class="px-6 py-4 text-cloud-whisper">Audit Risk</td><td class="px-6 py-4 text-mist-gray">Low if properly documented</td><td class="px-6 py-4 text-mist-gray">N/A</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 class="mt-10 font-bradford text-2xl font-medium text-cloud-whisper">How to Track Business Expenses</h2>
+    <div class="mt-6 space-y-6">
+      <div class="rounded-xl border border-white/10 bg-white/[0.02] p-6">
+        <span class="rounded-full bg-white/10 px-2.5 py-0.5 font-visueltpro text-xs text-cloud-whisper">Step 1</span>
+        <h3 class="mt-2 font-visueltpro font-medium text-cloud-whisper">Open Separate Accounts</h3>
+        <p class="mt-1 font-visueltpro text-sm leading-relaxed text-mist-gray">Get a dedicated business bank account and credit card. Never mix personal and business transactions.</p>
+      </div>
+      <div class="rounded-xl border border-white/10 bg-white/[0.02] p-6">
+        <span class="rounded-full bg-white/10 px-2.5 py-0.5 font-visueltpro text-xs text-cloud-whisper">Step 2</span>
+        <h3 class="mt-2 font-visueltpro font-medium text-cloud-whisper">Choose Accounting Software</h3>
+        <p class="mt-1 font-visueltpro text-sm leading-relaxed text-mist-gray">Use QuickBooks, Xero, or even a spreadsheet. The key is consistency — record every transaction and categorize it properly.</p>
+      </div>
+      <div class="rounded-xl border border-white/10 bg-white/[0.02] p-6">
+        <span class="rounded-full bg-white/10 px-2.5 py-0.5 font-visueltpro text-xs text-cloud-whisper">Step 3</span>
+        <h3 class="mt-2 font-visueltpro font-medium text-cloud-whisper">Save Every Receipt</h3>
+        <p class="mt-1 font-visueltpro text-sm leading-relaxed text-mist-gray">Use a digital receipt scanner or app. Save receipts with notes about the business purpose and client name.</p>
+      </div>
+      <div class="rounded-xl border border-white/10 bg-white/[0.02] p-6">
+        <span class="rounded-full bg-white/10 px-2.5 py-0.5 font-visueltpro text-xs text-cloud-whisper">Step 4</span>
+        <h3 class="mt-2 font-visueltpro font-medium text-cloud-whisper">Review and Reconcile Monthly</h3>
+        <p class="mt-1 font-visueltpro text-sm leading-relaxed text-mist-gray">Review your expenses monthly, not just at tax time. This catches errors early and gives you real-time visibility into business spending.</p>
+      </div>
+    </div>
+
+    <div class="mt-10 rounded-xl border border-white/10 bg-white/[0.02] p-8 text-center">
+      <h3 class="font-bradford text-2xl font-medium text-cloud-whisper">Master Your Personal Expenses Too</h3>
+      <p class="mt-2 font-visueltpro text-mist-gray">The same discipline that makes a business profitable applies to personal finances. Our free Expense Analyzer does it in 60 seconds.</p>
+      <ul class="mt-4 mx-auto max-w-sm space-y-2 text-left font-visueltpro text-sm text-mist-gray">
+        <li class="flex items-start gap-2"><span class="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-emerald-400"></span>Categorize fixed, variable, and semi-variable expenses automatically</li>
+        <li class="flex items-start gap-2"><span class="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-emerald-400"></span>Find spending leaks and identify savings opportunities</li>
+        <li class="flex items-start gap-2"><span class="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-emerald-400"></span>Calculate your savings rate and financial health score</li>
+        <li class="flex items-start gap-2"><span class="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-emerald-400"></span>100% free, no signup, no data sharing</li>
+      </ul>
+      <a href="/" class="mt-6 inline-flex items-center justify-center rounded-full bg-slate-dust px-8 py-3 font-visueltpro text-sm font-medium text-midnight-void transition-all hover:bg-white">
+        Use the Free Expense Analyzer
+      </a>
+    </div>
+
+    <h2 class="mt-10 font-bradford text-2xl font-medium text-cloud-whisper">Smart Business Expense Management Is a Competitive Advantage</h2>
+    <p class="mt-3 font-visueltpro leading-relaxed text-mist-gray">
+      Whether you are a solopreneur, freelancer, or growing small business, tracking your <strong class="text-cloud-whisper">business expenses</strong> is not just about tax deductions — it is about understanding how your business really performs. Use the <a href="/" class="text-cloud-whisper underline underline-offset-2 decoration-white/20 hover:decoration-white/60">Expense Analyzer</a> to apply the same rigor to your personal <a href="/monthly-expenses" class="text-cloud-whisper underline underline-offset-2 decoration-white/20 hover:decoration-white/60">monthly expenses</a>.
+    </p>
+
+    <h2 class="mt-16 font-bradford text-3xl font-medium text-cloud-whisper sm:text-4xl">Business Expenses FAQs</h2>
+    <p class="mt-2 font-visueltpro text-mist-gray">Common questions about business expenses, deductions, and tracking.</p>
+
+    <div class="mt-8 space-y-3">
+      {faqs.map((faq) => (
+        <details class="group overflow-hidden rounded-xl border border-white/10 bg-white/[0.02] transition-colors open:border-white/20">
+          <summary class="flex cursor-pointer items-center justify-between gap-4 px-6 py-4 font-visueltpro text-sm font-medium text-cloud-whisper transition-colors hover:text-white">
+            <span class="flex-1">{faq.question}</span>
+            <svg class="h-4 w-4 shrink-0 text-mist-gray transition-transform duration-200 group-open:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </summary>
+          <div class="border-t border-white/10 px-6 py-4">
+            <p class="font-visueltpro text-sm leading-relaxed text-mist-gray">{faq.answer}</p>
+          </div>
+        </details>
+      ))}
+    </div>
+  </main>
+  <Footer />
+</Layout>

@@ -1,0 +1,83 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout
+  title="About Us — expensy Money Leak Detector"
+  description="Learn about expensy and the Money Leak Detector. Our mission is to help everyone understand their spending habits and find hidden savings — no account required."
+  canonical="https://expensy.com/about/"
+>
+  <Header />
+  <main class="mx-auto max-w-3xl px-6 pt-32 pb-24">
+    <div class="mb-6 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5">
+      <span class="font-visueltpro text-xs tracking-wide text-mist-gray">About</span>
+    </div>
+
+    <h1 class="font-bradford text-4xl font-medium leading-tight tracking-tight text-cloud-whisper sm:text-5xl">
+      About expensy
+    </h1>
+
+    <hr class="my-10 border-white/10" />
+
+    <h2 class="font-bradford text-2xl font-medium text-cloud-whisper">Our Mission</h2>
+    <p class="mt-3 font-visueltpro leading-relaxed text-mist-gray">
+      Most people know how much they earn. Few know where their money actually goes. expensy was built to fix that — by giving anyone, anywhere, a free way to analyze their spending habits and find hidden savings in under 60 seconds.
+    </p>
+    <p class="mt-3 font-visueltpro leading-relaxed text-mist-gray">
+      No account creation. No bank integrations. No complicated spreadsheets. Just honest answers about your personal finances.
+    </p>
+
+    <h2 class="mt-10 font-bradford text-2xl font-medium text-cloud-whisper">Why We Built This</h2>
+    <p class="mt-3 font-visueltpro leading-relaxed text-mist-gray">
+        Traditional budgeting tools are overkill for most people. They require bank connections, monthly subscriptions, and hours of setup. Meanwhile, most people just want to answer one simple question: <em>"Where does my money go?"</em>
+    </p>
+    <p class="mt-3 font-visueltpro leading-relaxed text-mist-gray">
+        The Money Leak Detector strips away the complexity. Enter your income, enter your expenses, and get a clear picture of your financial health — with personalized recommendations you can act on immediately.
+    </p>
+    <p class="mt-3 font-visueltpro leading-relaxed text-mist-gray">
+        Whether you're a salaried employee, a student, a freelancer, or someone just starting their financial journey, this tool is for you.
+    </p>
+
+    <h2 class="mt-10 font-bradford text-2xl font-medium text-cloud-whisper">How It Works</h2>
+    <p class="mt-3 font-visueltpro leading-relaxed text-mist-gray">
+      The Money Leak Detector uses a five-module analysis engine — expense breakdown, leak detection, savings estimation, fixed expense risk analysis, and financial health scoring — all running entirely in your browser. Your data never touches a server.
+    </p>
+
+    <h2 class="mt-10 font-bradford text-2xl font-medium text-cloud-whisper">What People Are Saying</h2>
+    <div class="mt-6 space-y-4">
+      <div class="rounded-lg border border-white/10 bg-white/[0.02] p-5">
+        <p class="font-visueltpro text-sm italic leading-relaxed text-mist-gray">"I had no idea I was spending 22% of my income on food delivery. This tool was eye-opening."</p>
+      </div>
+      <div class="rounded-lg border border-white/10 bg-white/[0.02] p-5">
+        <p class="font-visueltpro text-sm italic leading-relaxed text-mist-gray">"Finally, a budgeting tool that doesn't ask for my bank password. Simple and effective."</p>
+      </div>
+    </div>
+
+    <h2 class="mt-10 font-bradford text-2xl font-medium text-cloud-whisper">Our Values</h2>
+    <ul class="mt-4 space-y-3 font-visueltpro text-mist-gray">
+      <li class="flex items-start gap-3">
+        <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-cloud-whisper/30"></span>
+        <span><strong class="text-cloud-whisper">Privacy first.</strong> Your financial data belongs to you. We never see it.</span>
+      </li>
+      <li class="flex items-start gap-3">
+        <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-cloud-whisper/30"></span>
+        <span><strong class="text-cloud-whisper">Free forever.</strong> No premium tiers, no paywalls, no hidden charges.</span>
+      </li>
+      <li class="flex items-start gap-3">
+        <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-cloud-whisper/30"></span>
+        <span><strong class="text-cloud-whisper">Simple by design.</strong> Financial literacy should be accessible to everyone, not buried in spreadsheets.</span>
+      </li>
+    </ul>
+
+    <div class="mt-10 rounded-xl border border-white/10 bg-white/[0.02] p-8 text-center">
+      <h3 class="font-bradford text-2xl font-medium text-cloud-whisper">Ready to Find Your Leaks?</h3>
+      <p class="mt-2 font-visueltpro text-mist-gray">It takes less than 60 seconds. No signup required.</p>
+      <a href="/" class="mt-6 inline-flex items-center justify-center rounded-full bg-slate-dust px-8 py-3 font-visueltpro text-sm font-medium text-midnight-void transition-all hover:bg-white">
+        Use the Detector
+      </a>
+    </div>
+  </main>
+  <Footer />
+</Layout>

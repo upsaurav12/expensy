@@ -1,0 +1,128 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout
+  title="Expense Categories — Fixed, Variable & Semi-Variable | Free Tool"
+  description="Learn about the three main expense categories — fixed, variable, and semi-variable. Use our free expense categorization tool to find money leaks and save more."
+  canonical="https://expensy.com/expense-categories/"
+>
+  <Header />
+  <main class="mx-auto max-w-3xl px-6 pt-32 pb-24">
+    <div class="mb-6 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5">
+      <span class="font-visueltpro text-xs tracking-wide text-mist-gray">Reference</span>
+    </div>
+
+    <h1 class="font-bradford text-4xl font-medium leading-tight tracking-tight text-cloud-whisper sm:text-5xl">
+      Expense Categories
+    </h1>
+
+    <p class="mt-4 font-visueltpro text-lg leading-relaxed text-mist-gray">
+      Every expense belongs to one of three categories. Knowing the difference is the first step to plugging money leaks and taking control of your personal finances.
+    </p>
+
+    <hr class="my-10 border-white/10" />
+
+    <!-- Fixed -->
+    <div class="mb-10">
+      <div class="mb-2 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5">
+        <span class="h-1.5 w-1.5 rounded-full bg-blue-400"></span>
+        <span class="font-visueltpro text-xs tracking-wide text-mist-gray">Predictable & Recurring</span>
+      </div>
+      <h2 class="font-bradford text-3xl font-medium text-cloud-whisper">Fixed Expenses</h2>
+      <p class="mt-3 font-visueltpro leading-relaxed text-mist-gray">
+        Fixed expenses cost the same every month. Rent, loan EMIs, and <a href="/fixed-expenses" class="text-cloud-whisper underline underline-offset-2 decoration-white/20 hover:decoration-white/60">subscriptions</a> are typical examples. While predictable, they become a leak when they consume too much income.
+      </p>
+      <p class="mt-2 font-visueltpro text-sm text-ash-accent">Watch out if fixed costs exceed 50% of income.</p>
+    </div>
+
+    <!-- Variable -->
+    <div class="mb-10">
+      <div class="mb-2 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5">
+        <span class="h-1.5 w-1.5 rounded-full bg-amber-400"></span>
+        <span class="font-visueltpro text-xs tracking-wide text-mist-gray">Fluctuating & Flexible</span>
+      </div>
+      <h2 class="font-bradford text-3xl font-medium text-cloud-whisper">Variable Expenses</h2>
+      <p class="mt-3 font-visueltpro leading-relaxed text-mist-gray">
+        Variable expenses change based on your habits — <a href="/variable-expenses" class="text-cloud-whisper underline underline-offset-2 decoration-white/20 hover:decoration-white/60">food, shopping, entertainment, and transport</a>. These are where most money leaks hide.
+      </p>
+      <p class="mt-2 font-visueltpro text-sm text-ash-accent">Biggest opportunity for savings.</p>
+    </div>
+
+    <!-- Semi-Variable -->
+    <div class="mb-10">
+      <div class="mb-2 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5">
+        <span class="h-1.5 w-1.5 rounded-full bg-purple-400"></span>
+        <span class="font-visueltpro text-xs tracking-wide text-mist-gray">Mixed Nature</span>
+      </div>
+      <h2 class="font-bradford text-3xl font-medium text-cloud-whisper">Semi-Variable Expenses</h2>
+      <p class="mt-3 font-visueltpro leading-relaxed text-mist-gray">
+        Semi-variable expenses have a fixed base plus usage charges. Utilities (electricity, water, internet) are classic examples. Our <a href="/" class="text-cloud-whisper underline underline-offset-2 decoration-white/20 hover:decoration-white/60">expense categorization</a> tool automatically sorts these for you.
+      </p>
+      <p class="mt-2 font-visueltpro text-sm text-ash-accent">Monitor usage to keep these under control.</p>
+    </div>
+
+    <!-- Threshold reference table -->
+    <div class="overflow-hidden rounded-xl border border-white/10">
+      <table class="w-full font-visueltpro text-sm">
+        <thead>
+          <tr class="border-b border-white/10 bg-white/[0.03]">
+            <th class="px-6 py-4 text-left font-medium text-cloud-whisper">Category</th>
+            <th class="px-6 py-4 text-left font-medium text-cloud-whisper">Type</th>
+            <th class="px-6 py-4 text-left font-medium text-cloud-whisper">Safe Limit</th>
+            <th class="px-6 py-4 text-left font-medium text-cloud-whisper">Leak Alert</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="border-b border-white/5">
+            <td class="px-6 py-4 text-cloud-whisper">Housing</td>
+            <td class="px-6 py-4 text-mist-gray">Fixed</td>
+            <td class="px-6 py-4 text-emerald-400">&lt; 30%</td>
+            <td class="px-6 py-4 text-red-400">&gt; 40%</td>
+          </tr>
+          <tr class="border-b border-white/5">
+            <td class="px-6 py-4 text-cloud-whisper">Food</td>
+            <td class="px-6 py-4 text-mist-gray">Variable</td>
+            <td class="px-6 py-4 text-emerald-400">&lt; 15%</td>
+            <td class="px-6 py-4 text-red-400">&gt; 25%</td>
+          </tr>
+          <tr class="border-b border-white/5">
+            <td class="px-6 py-4 text-cloud-whisper">Shopping</td>
+            <td class="px-6 py-4 text-mist-gray">Variable</td>
+            <td class="px-6 py-4 text-emerald-400">&lt; 10%</td>
+            <td class="px-6 py-4 text-red-400">&gt; 15%</td>
+          </tr>
+          <tr class="border-b border-white/5">
+            <td class="px-6 py-4 text-cloud-whisper">Entertainment</td>
+            <td class="px-6 py-4 text-mist-gray">Variable</td>
+            <td class="px-6 py-4 text-emerald-400">&lt; 5%</td>
+            <td class="px-6 py-4 text-red-400">&gt; 10%</td>
+          </tr>
+          <tr class="border-b border-white/5">
+            <td class="px-6 py-4 text-cloud-whisper">Transportation</td>
+            <td class="px-6 py-4 text-mist-gray">Variable</td>
+            <td class="px-6 py-4 text-emerald-400">&lt; 10%</td>
+            <td class="px-6 py-4 text-red-400">&gt; 15%</td>
+          </tr>
+          <tr>
+            <td class="px-6 py-4 text-cloud-whisper">Subscriptions</td>
+            <td class="px-6 py-4 text-mist-gray">Fixed</td>
+            <td class="px-6 py-4 text-emerald-400">&lt; 3%</td>
+            <td class="px-6 py-4 text-red-400">&gt; 5%</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="mt-10 rounded-xl border border-white/10 bg-white/[0.02] p-8 text-center">
+      <h3 class="font-bradford text-2xl font-medium text-cloud-whisper">Categorize Your Expenses Free</h3>
+      <p class="mt-2 font-visueltpro text-mist-gray">Our detector checks every category against these thresholds automatically.</p>
+      <a href="/" class="mt-6 inline-flex items-center justify-center rounded-full bg-slate-dust px-8 py-3 font-visueltpro text-sm font-medium text-midnight-void transition-all hover:bg-white">
+        Use the Detector
+      </a>
+    </div>
+  </main>
+  <Footer />
+</Layout>
