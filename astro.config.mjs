@@ -3,6 +3,8 @@ import { defineConfig } from "astro/config";
 import tailwindcss from "@tailwindcss/vite";
 import sitemap from "@astrojs/sitemap";
 import cloudflare from "@astrojs/cloudflare";
+import vercel from '@astrojs/vercel';
+
 
 const SITE = "https://main.expensy-31c.pages.dev/";
 
@@ -36,7 +38,7 @@ export default defineConfig({
       lastmod: new Date("2026-06-03"),
     }),
   ],
-  adapter: cloudflare(),
+  adapter: vercel(),
   vite: {
     plugins: [tailwindcss()],
   },
