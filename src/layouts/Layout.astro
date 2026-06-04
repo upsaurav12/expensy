@@ -11,7 +11,7 @@ interface Props {
 const {
   title,
   description = "Discover where your money is disappearing. Get personalized recommendations to save more based on your actual spending patterns.",
-  canonical = "https://expensy.com/",
+  canonical = "https://main.expensy-31c.pages.dev/y-31c.pages.dev//",
   ogImage = "/icon.svg",
 } = Astro.props;
 
@@ -30,6 +30,7 @@ const keywords = "money leak detector, monthly expenses tracker, spending habits
     <meta name="description" content={description} />
     <meta name="keywords" content={keywords} />
     <link rel="canonical" href={canonical} />
+    <meta name="google-site-verification" content="X8cCCrxUNbpdhjHwNcBM_9zOSG3fmMU3P7wTdjwEqUk" />
 
     <link rel="icon" type="image/svg+xml" href="/icon.svg" />
 
@@ -41,9 +42,9 @@ const keywords = "money leak detector, monthly expenses tracker, spending habits
     <meta property="og:title" content={fullTitle} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
-    <meta property="og:type" content={canonical === "https://expensy.com/" ? "website" : "article"} />
+    <meta property="og:type" content={canonical === "https://main.expensy-31c.pages.dev//" ? "website" : "article"} />
     <meta property="og:site_name" content={siteName} />
-    <meta property="og:image" content={`https://expensy.com${ogImage}`} />
+    <meta property="og:image" content={`https://main.expensy-31c.pages.dev/${ogImage}`} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:locale" content="en_IN" />
@@ -52,14 +53,14 @@ const keywords = "money leak detector, monthly expenses tracker, spending habits
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={fullTitle} />
     <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content={`https://expensy.com${ogImage}`} />
+    <meta name="twitter:image" content={`https://main.expensy-31c.pages.dev/${ogImage}`} />
 
     <!-- Structured Data: WebApplication -->
     <script type="application/ld+json" is:inline set:html={JSON.stringify({
       "@context": "https://schema.org",
       "@type": "WebApplication",
       name: siteName,
-      url: "https://expensy.com/",
+      url: "https://main.expensy-31c.pages.dev//",
       description,
       applicationCategory: "FinanceApplication",
       operatingSystem: "All",

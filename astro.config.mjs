@@ -4,7 +4,7 @@ import tailwindcss from "@tailwindcss/vite";
 import sitemap from "@astrojs/sitemap";
 import cloudflare from "@astrojs/cloudflare";
 
-const SITE = "https://expensy.com";
+const SITE = "https://main.expensy-31c.pages.dev/";
 
 // https://astro.build/config
 export default defineConfig({
