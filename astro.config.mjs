@@ -6,7 +6,7 @@ import cloudflare from "@astrojs/cloudflare";
 import vercel from '@astrojs/vercel';
 
 
-const SITE = "https://main.expensy-31c.pages.dev/";
+const SITE = "https://www.expensy.online/";
 
 // https://astro.build/config
 export default defineConfig({

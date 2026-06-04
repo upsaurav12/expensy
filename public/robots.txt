@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /contact/
 
-Sitemap: https://main.expensy-31c.pages.dev//sitemap-index.xml
+Sitemap: https://expensy.online/sitemap-index.xml
